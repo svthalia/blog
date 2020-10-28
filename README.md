@@ -1,2 +1,2 @@
-# blog
-The Technicie blog
+# The Technicie Blog
+
