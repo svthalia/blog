@@ -52,7 +52,7 @@ will be dropping a lot of security.
 For a zero-downtime system we need a reverse proxy to balance the requests
 between the current running version of the application and the new version.
 Because our current system uses NGINX for TLS termination and static file
-serving, we currently has the most knowledge of the NGINX reverse proxy. We
+serving, we currently have the most knowledge of the NGINX reverse proxy. We
 could use NGINX to balance the requests gradually to the new version, but then
 we would not be able to learn anything new! So I want to try and use HAProxy as
 a balancer between the two instances, and NGINX would then still run for the
