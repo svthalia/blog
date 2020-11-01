@@ -113,5 +113,9 @@ possible, I just haven't looked up how yet). I think this is the part where
 NixOS will really shine, because we will be able to build closures in GitHub
 actions and push them to the server.
 
-_[DRAFT NOTE: add something here about how we're already doing stuff with CD
-on staging/face-detect-app]_
+We have already started working on continuous deployment in the [face-detect-app
+repo] it uses NixOS and automatically deploys itself on the AWS EC2 instance
+when the master branch updates. We will continue to experiment with this method
+for our main website.
+
+[face-detect-app repo]: https://github.com/svthalia/face-detect-app/
