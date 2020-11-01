@@ -1,9 +1,8 @@
 ---
 layout: post
-title:  "Towards Zero-Downtime Deployments"
+title: Towards Zero-Downtime Deployments
+author: jelle
 ---
-
-# Towards Zero-Downtime Deployments
 
 For the thalia.nu website, we currently have quite a manual deployment method.
 Although we do configuration management with Ansible, a deploy requires us to
@@ -22,13 +21,13 @@ some thoughts in this blog post.
 
 ## Servers
 
-We use AWS ec2 to run our application currently. The application runs in a docker
+We use AWS EC2 to run our application currently. The application runs in a docker
 container which is part of a Docker compose file. This Docker compose file also
 includes our PostgreSQL Docker, but not the NGINX server which is located on the
-host for convenience mostly. For clarification, all of this is run on one ec2
+host for convenience mostly. For clarification, all of this is run on one EC2
 instance because we do not have the traffic to justify a multi-instance setup.
 
-For the new method I still want to use a single ec2 instance, which complicates
+For the new method I still want to use a single EC2 instance, which complicates
 the zero-downtime setup. Usually these load balancer setups assume a single server
 per service, so one or multiple proxy servers, one or multiple database servers and
 multiple app servers. The plan is to make this easier with NixOS, because it has
