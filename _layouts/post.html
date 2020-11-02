@@ -5,8 +5,8 @@ layout: default
 <h1>{{ page.title }}</h1>
 {% assign author = site[page.author] %}
 <div class="byline">
-    <p><address class="author" style="display: inline;">By <a rel="author">{{ author.name }}</a></address>
-    on <time pubdate datetime="{{ page.date }}">{{ page.date | date: '%B %d, %Y' }}</time></p>
+    <address class="author" style="display: inline;">By <a rel="author">{{ author.name }}</a></address>
+    on <time pubdate datetime="{{ page.date }}">{{ page.date | date: '%B %d, %Y' }}</time>
 </div>
 
 {{ content }}
